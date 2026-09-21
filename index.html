@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δρ. Ματίνα Ζορμπά | Χειρουργός Οδοντίατρος - Διδάκτωρ Στοματολογίας</title>
+    <meta name="description" content="Εξειδικευμένο οδοντιατρείο και στοματολογικό κέντρο στη Θέρμη Θεσσαλονίκης. Δρ. Ματίνα Ζορμπά, Διδάκτωρ Στοματολογίας.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-deep: #070c1b;
+            --bg-card: #101a36;
+            --bg-card-hover: #162247;
+            --gold-primary: #d4af37;
+            --gold-light: #f3e5ab;
+            --gold-muted: #c5a059;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: rgba(212, 175, 55, 0.15);
+            --border-highlight: rgba(212, 175, 55, 0.4);
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Plus Jakarta Sans', sans-serif;
+            --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-main);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4 {
+            font-family: var(--font-serif);
+            font-weight: 600;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 12, 27, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 44px;
+            height: 44px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.2) 0%, rgba(212, 175, 55, 0.05) 100%);
+            border: 1px solid var(--gold-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-icon svg {
+            width: 22px;
+            height: 22px;
+            fill: var(--gold-primary);
+        }
+
+        .logo-text h1 {
+            font-size: 1.35rem;
+            color: var(--text-main);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        .logo-text span {
+            font-size: 0.72rem;
+            color: var(--gold-muted);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            display: block;
+            margin-top: -2px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            letter-spacing: 0.05em;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--gold-primary);
+        }
+
+        .header-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #d4af37 0%, #b89228 100%);
+            color: #070c1b;
+            padding: 0.75rem 1.4rem;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.25);
+            transition: var(--transition);
+        }
+
+        .header-phone-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(212, 175, 55, 0.4);
+            background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 100%);
+        }
+
+        .header-phone-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: #070c1b;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 120px;
+            padding-bottom: 60px;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .hero-bg-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.18;
+            filter: grayscale(40%) contrast(110%);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(circle at 30% 30%, rgba(16, 26, 54, 0.6) 0%, rgba(7, 12, 27, 0.95) 75%);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 30px;
+            color: var(--gold-primary);
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-bottom: 1.8rem;
+        }
+
+        .rating-stars {
+            display: flex;
+            gap: 3px;
+            color: var(--gold-primary);
+        }
+
+        .hero-title {
+            font-size: clamp(2.8rem, 5vw, 4.2rem);
+            line-height: 1.15;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-title span {
+            color: var(--gold-primary);
+            font-style: italic;
+        }
+
+        .hero-subtitle {
+            font-size: 1.15rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+            max-width: 650px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .primary-phone-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, #d4af37 0%, #c5a059 100%);
+            color: #070c1b;
+            padding: 1.1rem 2.2rem;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            letter-spacing: 0.03em;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+            transition: var(--transition);
+        }
+
+        .primary-phone-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.45);
+        }
+
+        .primary-phone-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #070c1b;
+        }
+
+        .location-tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .location-tag svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--gold-muted);
+        }
+
+        /* Doctor Profile Section */
+        .doctor-section {
+            padding: 100px 0;
+            background: rgba(16, 26, 54, 0.3);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .doctor-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .doctor-image-wrapper {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-color);
+        }
+
+        .doctor-image-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .doctor-image-wrapper:hover img {
+            transform: scale(1.02);
+        }
+
+        .section-tag {
+            color: var(--gold-muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.8rem;
+            display: block;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 3.5vw, 3rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            color: var(--text-main);
+        }
+
+        .doctor-bio {
+            margin-bottom: 2rem;
+        }
+
+        .doctor-bio p {
+            margin-bottom: 1.2rem;
+        }
+
+        .credentials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .credential-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 1.2rem 1.5rem;
+            border-radius: 12px;
+        }
+
+        .credential-card h4 {
+            color: var(--gold-primary);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .credential-card p {
+            font-size: 0.88rem;
+            margin: 0;
+        }
+
+        /* Clinic Section */
+        .clinic-section {
+            padding: 100px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem auto;
+        }
+
+        .clinic-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            height: 380px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(7, 12, 27, 0.9) 0%, transparent 60%);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 2rem;
+        }
+
+        .gallery-overlay h3 {
+            color: var(--text-main);
+            font-size: 1.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .gallery-overlay p {
+            font-size: 0.9rem;
+            color: var(--gold-muted);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0;
+            background: rgba(16, 26, 54, 0.3);
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem 2rem;
+            border-radius: 16px;
+            transition: var(--transition);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--border-highlight);
+            background: var(--bg-card-hover);
+        }
+
+        .service-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .service-icon svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold-primary);
+        }
+
+        .service-card h3 {
+            font-size: 1.4rem;
+            color: var(--text-main);
+            margin-bottom: 1rem;
+        }
+
+        /* Reviews Section */
+        .reviews-section {
+            padding: 100px 0;
+        }
+
+        .google-rating-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 0.8rem 1.6rem;
+            border-radius: 40px;
+            margin-bottom: 2rem;
+        }
+
+        .google-rating-number {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--gold-primary);
+        }
+
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .review-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            border-radius: 16px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .review-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+
+        .author-avatar {
+            width: 44px;
+            height: 44px;
+            background: rgba(212, 175, 55, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .author-info h4 {
+            font-family: var(--font-sans);
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .author-info span {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .review-text {
+            font-size: 0.95rem;
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1.5rem;
+        }
+
+        .review-response {
+            background: rgba(7, 12, 27, 0.6);
+            border-left: 2px solid var(--gold-primary);
+            padding: 0.8rem 1rem;
+            border-radius: 0 8px 8px 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .review-response span {
+            color: var(--gold-muted);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        /* Contact & Map Section */
+        .contact-section {
+            padding: 100px 0;
+            background: rgba(16, 26, 54, 0.3);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 3rem 2.5rem;
+            border-radius: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contact-icon {
+            width: 46px;
+            height: 46px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-icon svg {
+            width: 20px;
+            height: 20px;
+            fill: var(--gold-primary);
+        }
+
+        .contact-details h4 {
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold-muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-details p, .contact-details a {
+            font-size: 1.1rem;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .contact-phone-link {
+            font-size: 1.3rem !important;
+            color: var(--gold-primary) !important;
+            font-weight: 700 !important;
+            transition: var(--transition);
+        }
+
+        .contact-phone-link:hover {
+            color: var(--gold-light) !important;
+        }
+
+        .map-wrapper {
+            height: 100%;
+            min-height: 450px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .map-wrapper iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 450px;
+            border: 0;
+            filter: grayscale(20%) contrast(105%) invert(90%) hue-rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #040711;
+            padding: 3rem 0 2rem 0;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo svg {
+            width: 24px;
+            height: 24px;
+            fill: var(--gold-primary);
+        }
+
+        .footer-copy {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .doctor-grid, .contact-grid, .clinic-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .gallery-item {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 0 1.2rem;
+            }
+
+            .hero-title {
+                font-size: 2.3rem;
+            }
+
+            .credentials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info-card {
+                padding: 2rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,2C8,2 5,5 5,9C5,13.5 7,16.5 8.5,19.5 C9.5,21.5 10.5,22 11.5,22 C12,22 12.2,21.2 12,20.2 C11.5,17.7 12.5,16 12,14 C11.5,16 12.5,17.7 12,20.2 C11.8,21.2 12,22 12.5,22 C13.5,22 14.5,21.5 15.5,19.5 C17,16.5 19,13.5 19,9 C19,5 16,2 12,2Z"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>Δρ. Ματίνα Ζορμπά</h1>
+                    <span>Διδακτωρ Στοματολογιας</span>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Η Γιατρός</a></li>
+                <li><a href="#clinic" class="nav-link">Το Ιατρείο</a></li>
+                <li><a href="#services" class="nav-link">Υπηρεσίες</a></li>
+                <li><a href="#reviews" class="nav-link">Αξιολογήσεις</a></li>
+                <li><a href="#contact" class="nav-link">Επικοινωνία</a></li>
+            </ul>
+
+            <a href="tel:2316028378" class="header-phone-btn">
+                <svg viewBox="0 0 24 24">
+                    <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                </svg>
+                231 602 8378
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="reception.png" alt="Ιατρείο Υποδοχή" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <div class="rating-stars">★★★★★</div>
+                    <span>5.0 Google Rating (67 Αξιολογήσεις)</span>
+                </div>
+                <h1 class="hero-title">
+                    Εξειδικευμένη Στοματολογική & <span>Οδοντιατρική Φροντίδα</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Σύγχρονο ιατρείο στη Θέρμη. Εξατομικευμένες θεραπείες με επιστημονική αριστεία, προσοχή στη λεπτομέρεια και απόλυτο σεβασμό στον ασθενή.
+                </p>
+                <div class="hero-actions">
+                    <a href="tel:2316028378" class="primary-phone-btn">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                        </svg>
+                        Τηλεφωνική Επικοινωνία: 231 602 8378
+                    </a>
+                    <div class="location-tag">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"/>
+                        </svg>
+                        Ταβάκη 7, Θέρμη 570 01
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Profile Section -->
+    <section id="about" class="doctor-section">
+        <div class="container">
+            <div class="doctor-grid">
+                <div class="doctor-image-wrapper">
+                    <img src="doctor_scrubs.png" alt="Δρ. Ματίνα Ζορμπά - Χειρουργός Οδοντίατρος, Διδάκτωρ Στοματολογίας">
+                </div>
+                <div class="doctor-info">
+                    <span class="section-tag">Επιστημονικό Υπόβαθρο</span>
+                    <h2 class="section-title">Δρ. Ματίνα Ζορμπά</h2>
+                    <div class="doctor-bio">
+                        <p>
+                            Η Δρ. Ματίνα Ζορμπά είναι Χειρουργός Οδοντίατρος και Διδάκτωρ Στοματολογίας. Η πολυετής ακαδημαϊκή και κλινική της πορεία εξασφαλίζει την παροχή στοματολογικών και οδοντιατρικών υπηρεσιών υψηλότατου επιπέδου.
+                        </p>
+                        <p>
+                            Με έμφαση στη λεπτομερή διάγνωση, την επιστημονική ακρίβεια και την ανώδυνη αντιμετώπιση, το ιατρείο προσφέρει ένα ήρεμο και απόλυτα ασφαλές περιβάλλον για κάθε ασθενή.
+                        </p>
+                    </div>
+
+                    <div class="credentials-grid">
+                        <div class="credential-card">
+                            <h4>Διδάκτωρ Στοματολογίας</h4>
+                            <p>Εξειδίκευση στις παθήσεις βλεννογόνου και τη στοματολογική διάγνωση.</p>
+                        </div>
+                        <div class="credential-card">
+                            <h4>Χειρουργός Οδοντίατρος</h4>
+                            <p>Πλήρες φάσμα χειρουργικών & αισθητικών οδοντιατρικών θεραπειών.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clinic Space Section -->
+    <section id="clinic" class="clinic-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Ο Χώρος Μας</span>
+                <h2 class="section-title">Σύγχρονες Εγκαταστάσεις & Εξοπλισμός</h2>
+                <p>Ένας χώρος σχεδιασμένος με γνώμονα την άνεση, την υγιεινή και την κορυφαία τεχνολογία.</p>
+            </div>
+
+            <div class="clinic-gallery">
+                <div class="gallery-item">
+                    <img src="reception.png" alt="Χώρος Υποδοχής Ιατρείου">
+                    <div class="gallery-overlay">
+                        <h3>Χώρος Υποδοχής</h3>
+                        <p>Καλαίσθητο και άνετο περιβάλλον αναμονής</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="clinic.png" alt="Οδοντιατρική Χειρουργική Έδρα">
+                    <div class="gallery-overlay">
+                        <h3>Χειρουργική Έδρα</h3>
+                        <p>Τεχνολογία αιχμής & αυστηρά πρωτόκολλα αποστείρωσης</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Εξειδικεύσεις</span>
+                <h2 class="section-title">Οδοντιατρικές & Στοματολογικές Υπηρεσίες</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4Z"/>
+                        </svg>
+                    </div>
+                    <h3>Στοματολογία & Διαγνωστική</h3>
+                    <p>Διάγνωση και αποτελεσματική αντιμετώπιση βλαβών του στοματικού βλεννογόνου (άφθες, βλάβες, αυτοάνοσα νοσήματα στόματος).</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M19,3H5C3.89,3 3,3.89 3,5V19C3,20.1 3.89,21 5,21H19C20.1,21 21,20.1 21,19V5C21,3.89 20.1,3 19,3M19,19H5V5H19V19Z"/>
+                        </svg>
+                    </div>
+                    <h3>Χειρουργική Στόματος</h3>
+                    <p>Εξαγωγές έγκλειστων οδόντων, χειρουργικός καθαρισμός και εξειδικευμένες επεμβάσεις στόματος.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2L1,21H23L12,2M12,6L18.8,18H5.2L12,6Z"/>
+                        </svg>
+                    </div>
+                    <h3>Αισθητική Οδοντιατρική</h3>
+                    <p>Λεύκανση, όψεις ρητίνης & πορσελάνης, αποκαταστάσεις υψηλής αισθητικής για ένα φυσικό χαμόγελο.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2Z"/>
+                        </svg>
+                    </div>
+                    <h3>Γενική & Προληπτική</h3>
+                    <p>Καθαρισμός, θεραπεία ουλίτιδας & περιοδοντίτιδας, εμφράξεις (σφραγίσματα) και προληπτικός έλεγχος.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="google-rating-badge">
+                    <span class="google-rating-number">5.0</span>
+                    <div class="rating-stars">★★★★★</div>
+                    <span style="color: var(--text-muted); font-size: 0.9rem;">(67 Αξιολογήσεις Google)</span>
+                </div>
+                <h2 class="section-title">Εμπειρίες Ασθενών</h2>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div>
+                        <div class="review-author">
+                            <div class="author-avatar">H</div>
+                            <div class="author-info">
+                                <h4>Hari Karava</h4>
+                                <span>Google Review</span>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Άψογη επαγγελματίας με γνώσεις και προσοχή στη λεπτομέρεια. Ο χώρος είναι σύγχρονος, καθαρός και καλαίσθητος, κάτι που σε κάνει να αισθάνεσαι άνετα. Μου εξήγησε αναλυτικά τη διαδικασία και έδειξε πραγματικό ενδιαφέρον. Την προτείνω χωρίς δεύτερη σκέψη."
+                        </p>
+                    </div>
+                    <div class="review-response">
+                        <span>Απάντηση από τη γιατρό:</span>
+                        Σας ευχαριστώ πολύ. Χαίρομαι που ανταποκρίθηκα στις ανάγκες σας!
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-author">
+                            <div class="author-avatar">M</div>
+                            <div class="author-info">
+                                <h4>Matina Makri</h4>
+                                <span>Google Review</span>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Εξαιρετική ειδικός η κα Ζορμπά. Πήγα στο ιατρείο για πρόβλημα με άφθες στο στόμα, ένα επίμονο πρόβλημα, που με τις συμβουλές της γιατρού αντιμετώπισα πολύ αποτελεσματικά. Ευχαριστώ πολύ!"
+                        </p>
+                    </div>
+                    <div class="review-response">
+                        <span>Απάντηση από τη γιατρό:</span>
+                        Σας ευχαριστώ πολύ. Χαίρομαι που βοήθησα. Παραμένω στη διάθεσή σας.
+                    </div>
+                </div>
+
+                <div class="review-card">
+                    <div>
+                        <div class="review-author">
+                            <div class="author-avatar">Γ</div>
+                            <div class="author-info">
+                                <h4>ΓΙΩΡΓΟΣ ΠΛΟΥΜΙΔΗΣ</h4>
+                                <span>Google Review</span>
+                            </div>
+                        </div>
+                        <p class="review-text">
+                            "Από παιδί ασθενής γνωστού καθηγητή και διευθυντή γναθοχειρουργικής. Η μετάβαση στο πελατολόγιο της γιατρού από την εποχή που ήταν ακόμη διδακτορική ήταν η καλύτερη επιλογή. Μακροχρόνια εμπιστοσύνη!"
+                        </p>
+                    </div>
+                    <div class="review-response">
+                        <span>Απάντηση από τη γιατρό:</span>
+                        Καλέ μου Γιώργο σε ευχαριστώ πολύ για τα λόγια σου! Με τιμά ιδιαίτερα η εμπιστοσύνη σου.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <span class="section-tag">Επικοινωνια</span>
+                    <h2 class="section-title" style="font-size: 2.2rem; margin-bottom: 2rem;">Στοιχεία Ιατρείου</h2>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Τηλεφωνο (Για Ραντεβου & Πληροφοριες)</h4>
+                            <a href="tel:2316028378" class="contact-phone-link">231 602 8378</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Διευθυνση</h4>
+                            <p>Ταβάκη 7, Θέρμη 570 01, Θεσσαλονίκη</p>
+                            <span style="font-size: 0.85rem; color: var(--gold-muted); display: block; margin-top: 2px;">Plus Code: G2X9+7R Θέρμη</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Ωραριο Λειτουργιας</h4>
+                            <p>Ανοιχτά · Κλείνει 8:00 μ.μ.</p>
+                            <span style="font-size: 0.85rem; color: var(--text-muted);">(Κατόπιν τηλεφωνικής επικοινωνίας)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Google Maps Embed directly pointing to doctor's clinic address -->
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3030.82572166542!2d22.9995188!3d40.5454025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14a83f3e2b95610d%3A0xb3cf5428a2a075e5!2zzqTOsc6yzqzOus63IDcsIM6Yzq3Pgc68zrcgNTcwIDAx!5e0!3m2!1sel!2sgr!4v1710000000000!5m2!1sel!2sgr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,2C8,2 5,5 5,9C5,13.5 7,16.5 8.5,19.5 C9.5,21.5 10.5,22 11.5,22 C12,22 12.2,21.2 12,20.2 C11.5,17.7 12.5,16 12,14 C11.5,16 12.5,17.7 12,20.2 C11.8,21.2 12,22 12.5,22 C13.5,22 14.5,21.5 15.5,19.5 C17,16.5 19,13.5 19,9 C19,5 16,2 12,2Z"/>
+                </svg>
+                <span style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--text-main); font-weight: 600;">Δρ. Ματίνα Ζορμπά</span>
+            </div>
+            <p class="footer-copy">
+                &copy; Δρ. Ματίνα Ζορμπά - Χειρουργός Οδοντίατρος, Διδάκτωρ Στοματολογίας. Ταβάκη 7, Θέρμη. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
